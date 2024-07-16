@@ -15,7 +15,7 @@ services:
     image: ghcr.io/web3kt/web-explorer:latest
     container_name: web
     environment:
-      PUBLIC_SYMBOL: ETH
+      PUBLIC_SYMBOL: ${SYMBOL:-ETH}
       PUBLIC_API_ENDPOINT: http://api:8080
     ports:
       - 3000:3000
