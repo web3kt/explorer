@@ -1,6 +1,6 @@
 # Explorer
 
-Blockchain Explorer for Besu.
+Blockchain Explorer for [Hyperledger Besu](https://besu.hyperledger.org).
 ![Dashboard](./image/dashboard.png "Dashboard")
 
 ## Deployment instructions
