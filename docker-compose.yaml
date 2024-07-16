@@ -1,0 +1,30 @@
+services:
+  api:
+    image: ghcr.io/web3kt/api-explorer:latest
+    container_name: api
+    environment:
+      MYSQL_URL: mysql:3306
+      MYSQL_DATABASE: explorer
+      MYSQL_USER: explorer
+      MYSQL_PASSWORD: password
+      BESU_RPC_URL: http://localhost:8545
+    depends_on:
+      - mysql
+  web:
+    image: ghcr.io/web3kt/web-explorer:latest
+    container_name: web
+    environment:
+      PUBLIC_SYMBOL: ETH
+      PUBLIC_API_ENDPOINT: http://api:8080
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: explorer
+      MYSQL_USER: explorer
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
