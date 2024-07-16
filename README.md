@@ -1,6 +1,9 @@
 # Explorer
 
-## How to run
+Blockchain Explorer for Besu.
+![Dashboard](./image/dashboard.png "Dashboard")
+
+## Deployment instructions
 
 ### Clone repository
 
@@ -21,12 +24,8 @@ cd explorer
 docker compose pull
 ```
 
-### Modify `docker-compose.yaml` to suit your environment.
-
-The default host and port of Besu API endpoint is http://localhost:8545.
-
 ### Run docker compose
 
 ```shell
-docker compose up
+RPC_ENDPOINT=http://<rpc_endpoint> docker compose up
 ```
