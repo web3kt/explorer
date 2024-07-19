@@ -5,7 +5,7 @@ Blockchain Explorer for [Hyperledger Besu](https://besu.hyperledger.org).
 
 ## Deployment instructions
 
-### Clone repository
+Clone repository
 
 ```shell
 git clone git@github.com:web3kt/explorer.git
@@ -17,15 +17,15 @@ or
 git clone https://github.com/web3kt/explorer.git
 ```
 
-### Pull docker image
-
-```shell
-cd explorer
-docker compose pull
-```
-
-### Run docker compose
+### External RPC
 
 ```shell
 RPC_ENDPOINT=http://<rpc_endpoint> docker compose up
+```
+
+### Mainnet
+
+```shell
+cd mainnet
+DIRECTORY=/data ./run.sh
 ```

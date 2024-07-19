@@ -52,7 +52,7 @@ services:
       BESU_RPC_HTTP_HOST: 0.0.0.0
       BESU_RPC_HTTP_MAX_ACTIVE_CONNECTIONS: 4096
       BESU_RPC_HTTP_API: ETH,NET,WEB3,TXPOOL,TRACE
-      BESU_SYNC_MODE: X_SNAP
+      BESU_SYNC_MODE: FULL
     ports:
       - "30303:30303/tcp"
       - "30303:30303/udp"
@@ -74,4 +74,4 @@ services:
       - "9000:9000/tcp"
       - "9000:9000/udp"
     volumes:
-      - ${DATAPATH:-./data}:/var/lib/teku
+      - ${DATAPATH:-./data}/teku:/var/lib/teku
