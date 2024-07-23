@@ -1,11 +1,11 @@
 # Explorer
 
-Blockchain Explorer for [Hyperledger Besu](https://besu.hyperledger.org).
+Blockchain Explorer for [Hyperledger Besu](https://besu.hyperledger.org) with [QBFT](https://entethalliance.github.io/client-spec/qbft_spec.html).
 ![Dashboard](./image/dashboard.png "Dashboard")
 
 ## Deployment instructions
 
-Clone repository
+### Clone repository
 
 ```shell
 git clone git@github.com:web3kt/explorer.git
@@ -17,15 +17,8 @@ or
 git clone https://github.com/web3kt/explorer.git
 ```
 
-### External RPC
+### Run
 
 ```shell
 RPC_ENDPOINT=http://<rpc_endpoint> docker compose up
-```
-
-### Mainnet
-
-```shell
-cd mainnet
-DIRECTORY=/data ./run.sh
 ```
